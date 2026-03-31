@@ -14,7 +14,7 @@ class Category(models.Model):
         ordering = ["-id"]
 
 
-class Task(models.Model):
+class Tasks(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     status = models.CharField(max_length=150,
