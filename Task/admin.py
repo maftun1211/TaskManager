@@ -1,7 +1,5 @@
 from django.contrib import admin
+from .models import Tasks, Category
 
-from api.views import CategoryView
-from .models import Tasks
-
-
-admin.site.register(Tasks, CategoryView)
+admin.site.register(Tasks)
+admin.site.register(Category)
