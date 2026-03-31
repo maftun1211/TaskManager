@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CategoryView, TaskListCreateAPIView
+from .views import CategoryView, TaskListCreateAPIView, TaskRetrieveUpdateDestroyAPIView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView

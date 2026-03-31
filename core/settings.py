@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'dj_rest_auth',
     'dj_rest_auth.registration',
+    'allauth.socialaccount',
     'allauth',
     'allauth.account',
     'drf_spectacular',
