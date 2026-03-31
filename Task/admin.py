@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from api.views import CategoryView
+from .models import Tasks
+
+
+admin.site.register(Tasks, CategoryView)
