@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'drf_spectacular',
     'django_filters',
-    'Task',
+
 ]
 
 REST_FRAMEWORK = {
