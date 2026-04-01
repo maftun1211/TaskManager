@@ -24,9 +24,9 @@ class UserSerializer(ModelSerializer):
 class TasksSerializer(ModelSerializer):
     class Meta:
         model = Tasks
-        fields = ['title', 'description','status', 'created_at', 'category']
+        fields = ['id','title', 'description','status', 'created_at', 'category']
 
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ['name']
+        fields = ['id','name']
