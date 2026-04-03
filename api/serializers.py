@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from Task.models import Tasks, Category
+from Task.models import Task, Category
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
@@ -8,10 +8,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-
-        # token['name'] = user.name
         token['username'] = user.username
-
         return token
 
 
@@ -21,9 +18,9 @@ class UserSerializer(ModelSerializer):
         fields = ['username', 'email']
 
 
-class TasksSerializer(ModelSerializer):
+class TaskSerializer(ModelSerializer):
     class Meta:
-        model = Tasks
+        model = Task
         fields = ['id','title', 'description','status', 'created_at', 'category']
 
 class CategorySerializer(ModelSerializer):

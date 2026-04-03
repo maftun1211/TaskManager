@@ -7,6 +7,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
     def get_absolute_url(self):
         return "/" +str( self.id)+ "/"
 
@@ -14,7 +15,7 @@ class Category(models.Model):
         ordering = ["-id"]
 
 
-class Tasks(models.Model):
+class Task(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     status = models.CharField(max_length=150,
@@ -24,6 +25,7 @@ class Tasks(models.Model):
 
     def __str__(self):
         return self.title
+
     def get_absolute_url(self):
         return "/" +str( self.id)+ "/"
 
